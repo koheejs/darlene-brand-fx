@@ -273,6 +273,22 @@ header .header-nav.active {
     width: 50%;
   }
 }
+#acceleration {
+  padding: 10rem 0;
+  background-color: var(--dark-color);
+}
+#acceleration .title {
+  font-size: 9rem;
+}
+#acceleration .title strong {
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 1125px) {
+  #acceleration .title {
+    font-size: max(6vw, 4rem);
+  }
+}
 #respark-your-brand {
   padding: 20rem 0 10rem;
   background-image: url("../assets/images/respark-bg.png");
@@ -387,7 +403,8 @@ header .header-nav.active {
   display: flex;
   align-items: center;
   gap: 2rem;
-  margin: 5rem 0;
+  margin: 4rem 0;
+  min-height: 8rem;
 }
 #business-expansion .components .item .points {
   display: flex;
@@ -446,5 +463,73 @@ header .header-nav.active {
 @media only screen and (max-width: 768px) {
   #business-expansion .components .item .partners {
     flex-direction: column;
+  }
+}
+#catalyst-for-growth .growth-item {
+  display: flex;
+}
+#catalyst-for-growth .growth-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+#catalyst-for-growth .growth-item .heading, #catalyst-for-growth .growth-item .content {
+  width: 50%;
+  padding-top: 50%;
+  position: relative;
+}
+#catalyst-for-growth .growth-item .heading > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#catalyst-for-growth .growth-item .heading h3 {
+  position: absolute;
+  font-size: 8rem;
+  font-weight: 700;
+  top: 50%;
+  left: 50%;
+  width: 50rem;
+  max-width: 90%;
+  transform: translate(-50%, -50%);
+}
+#catalyst-for-growth .growth-item .content p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2.4rem;
+  width: calc(100% - 12rem);
+  max-width: 600px;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 1125px) {
+  #catalyst-for-growth .growth-item .heading h3 {
+    font-size: max(6vw, 4rem);
+  }
+  #catalyst-for-growth .growth-item .content p {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #catalyst-for-growth .growth-item, #catalyst-for-growth .growth-item:nth-child(even) {
+    flex-direction: column;
+  }
+  #catalyst-for-growth .growth-item .heading, #catalyst-for-growth .growth-item .content, #catalyst-for-growth .growth-item:nth-child(even) .heading, #catalyst-for-growth .growth-item:nth-child(even) .content {
+    width: 100%;
+    padding-top: 50%;
+  }
+  #catalyst-for-growth .growth-item .heading h3, #catalyst-for-growth .growth-item:nth-child(even) .heading h3 {
+    width: calc(100% - 6rem);
+    max-width: none;
+    left: 3rem;
+    transform: translate(0, -50%);
+  }
+  #catalyst-for-growth .growth-item .content p, #catalyst-for-growth .growth-item:nth-child(even) .content p {
+    width: calc(100% - 6rem);
+    max-width: none;
+    left: 3rem;
+    transform: translate(0, -50%);
   }
 }
