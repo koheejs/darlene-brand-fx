@@ -1,0 +1,44 @@
+#trusted-partners
+  background-color: var(--dark-color)
+  padding: 4rem 0 6rem
+
+  & .partner-wrapper
+    max-width: 1200px
+    margin: auto
+
+  & .partners
+    margin: 0 -1rem
+    display: flex
+    justify-content: space-between
+    overflow-x: auto
+
+    & li
+      padding: 0 2rem
+      height: 120px
+      display: inline-flex
+      justify-content: center
+      align-items: center
+
+  & .partners img
+    width: 130px
+    height: 100%
+    object-fit: contain
+
+@media only screen and (max-width: 1150px)
+  #trusted-partners
+    & .container
+      padding: 0
+
+    & .partners
+      margin: 0 -1rem
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+    & li
+      width: calc(100% / 2)
+
+@media only screen and (max-width: 768px)
+  #trusted-partners
+    & .partners li
+      width: calc(100% / 2)
