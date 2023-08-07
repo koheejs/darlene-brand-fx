@@ -8,16 +8,16 @@ const paths = {
   assetsSrc: 'src/assets/**/*',
   jadeSrc: 'src/*.jade',
   sassSrc: 'src/**/*.sass',
-  outputDir: 'dist',
+  outputDir: 'docs',
 };
 
 // Copy assets to dist folder
 gulp.task('copy-assets', () => {
   return gulp
     .src(paths.assetsSrc)
-    .pipe(copy('dist', { prefix: 1 })) // Copies to the 'dist' folder with a depth of 1
+    .pipe(copy(paths.outputDir, { prefix: 1 })) // Copies to the public folder with a depth of 1
     .on('end', () => {
-      console.log('Assets copied to dist folder.');
+      console.log('Assets copied to docs folder.');
     });
 });
 
