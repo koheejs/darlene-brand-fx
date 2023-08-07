@@ -1,0 +1,87 @@
+#business-expansion
+  padding: 9vw 0 10rem
+  background-image: url('../assets/images/business-bg.png')
+  background-size: 100% auto
+  background-position: center top
+  background-repeat: no-repeat
+
+  & h2.title
+    text-align: center
+    font-size: 9rem
+    max-width: 1220px
+    margin: 0 auto 10rem
+    & strong
+      font-weight: 800
+
+  & .components
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    & .item
+      width: 50%
+      max-width: 600px
+      margin-bottom: 12rem
+      & h3
+        font-size: 5rem
+        font-weight: 700
+      & .partners
+        display: flex
+        align-items: center
+        gap: 2rem
+        margin: 5rem 0
+      & .points
+        display: flex
+        flex-wrap: wrap
+        font-size: 2.4rem
+        & li
+          width: 50%
+          list-style: disc
+          list-style-position: inside
+
+@media only screen and (max-width: 1125px)
+  #business-expansion
+    & h2.title
+      font-size: max(6vw, 4rem)
+
+    & .components
+      & .item
+        & h3
+          font-size: 3rem
+        & .partners
+          margin: 3rem 0
+        & .points
+          font-size: 1.8rem
+
+@media only screen and (max-width: 920px)
+  #business-expansion
+    & .components
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      & .item
+        width: 100%
+        max-width: none
+        & h3
+          text-align: center
+        & .partners
+          justify-content: center
+        & .points
+          justify-content: center
+          & li
+            width: 100%
+            max-width: 300px
+
+@media only screen and (max-width: 768px)
+  #business-expansion
+    & .components
+      & .item
+        & .points
+          & li
+            max-width: 230px
+
+@media only screen and (max-width: 768px)
+  #business-expansion
+    & .components
+      & .item
+        & .partners
+          flex-direction: column
