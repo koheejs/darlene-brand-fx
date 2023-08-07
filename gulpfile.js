@@ -63,3 +63,5 @@ gulp.task(
   'default',
   gulp.series('copy-assets', 'jade', 'sass', gulp.parallel('watch', 'serve'))
 );
+
+gulp.task('build', gulp.series('copy-assets', 'jade', 'sass'));

@@ -1,7 +1,6 @@
 #respark-your-brand
-  padding: 20rem
+  padding: 20rem 0
   background-image: url('../assets/images/respark-bg.png')
-  background-size: min(2000px, 100%) auto
   background-position: center top
   background-repeat: no-repeat
 
@@ -13,7 +12,7 @@
     padding: 8rem 0
 
     & .title
-      font-size: 9rem
+      font-size: max(5rem, min(9rem, 3vw))
       line-height: 1.1
       flex-shrink: 0
 
@@ -21,11 +20,11 @@
         font-weight: 800
     & .description
       max-width: 780px
-      font-size: 3rem
+      font-size: max(2rem, min(3rem, 2vw))
 
   & .illustration
     text-align: center
-    & ul.goals
+    & .goals
       display: flex
       gap: 2rem
       max-width: 1180px
@@ -35,9 +34,41 @@
         border-radius: 8px
         padding: 2rem
         flex: 1
+      & img
+        width: 70px
+        height: 70px
+      & p
+        font-weight: 800
+        font-size: 3rem
+
+@media only screen and (max-width: 992px)
+  #respark-your-brand
+    & .illustration
+      .goals
+        margin-top: -6rem
         & img
-          width: 70px
-          height: 70px
+          width: 50px
+          height: 50px
         & p
-          font-weight: 800
-          font-size: 3rem
+          font-size: 2rem
+
+@media only screen and (max-width: 768px)
+  #respark-your-brand
+    & .content
+      text-align: center
+      flex-direction: column
+      gap: 2rem
+
+  #respark-your-brand
+    & .illustration
+      .goals
+        flex-direction: column
+        align-items: center
+        & li
+          width: 300px
+
+@media only screen and (max-width: 568px)
+  #respark-your-brand
+    & .illustration
+      .goals
+        margin-top: -3rem

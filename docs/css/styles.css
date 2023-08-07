@@ -274,9 +274,8 @@ header .header-nav.active {
   }
 }
 #respark-your-brand {
-  padding: 20rem;
+  padding: 20rem 0;
   background-image: url("../assets/images/respark-bg.png");
-  background-size: min(2000px, 100%) auto;
   background-position: center top;
   background-repeat: no-repeat;
 }
@@ -288,7 +287,7 @@ header .header-nav.active {
   padding: 8rem 0;
 }
 #respark-your-brand .content .title {
-  font-size: 9rem;
+  font-size: max(5rem, min(9rem, 3vw));
   line-height: 1.1;
   flex-shrink: 0;
 }
@@ -297,28 +296,60 @@ header .header-nav.active {
 }
 #respark-your-brand .content .description {
   max-width: 780px;
-  font-size: 3rem;
+  font-size: max(2rem, min(3rem, 2vw));
 }
 #respark-your-brand .illustration {
   text-align: center;
 }
-#respark-your-brand .illustration ul.goals {
+#respark-your-brand .illustration .goals {
   display: flex;
   gap: 2rem;
   max-width: 1180px;
   margin: -10rem auto 0;
 }
-#respark-your-brand .illustration ul.goals li {
+#respark-your-brand .illustration .goals li {
   background-color: var(--primary-color);
   border-radius: 8px;
   padding: 2rem;
   flex: 1;
 }
-#respark-your-brand .illustration ul.goals li img {
+#respark-your-brand .illustration .goals img {
   width: 70px;
   height: 70px;
 }
-#respark-your-brand .illustration ul.goals li p {
+#respark-your-brand .illustration .goals p {
   font-weight: 800;
   font-size: 3rem;
+}
+
+@media only screen and (max-width: 992px) {
+  #respark-your-brand .illustration .goals {
+    margin-top: -6rem;
+  }
+  #respark-your-brand .illustration .goals img {
+    width: 50px;
+    height: 50px;
+  }
+  #respark-your-brand .illustration .goals p {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #respark-your-brand .content {
+    text-align: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #respark-your-brand .illustration .goals {
+    flex-direction: column;
+    align-items: center;
+  }
+  #respark-your-brand .illustration .goals li {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 568px) {
+  #respark-your-brand .illustration .goals {
+    margin-top: -3rem;
+  }
 }
