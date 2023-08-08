@@ -172,8 +172,35 @@ html(lang="en")
               p.name Omar Sahyoun
               p.intro 20+ years of conceptualizing, building and operating innovative software, marketplaces and end to end digital solutions.
 
+      section#contact-form
+        .container
+          //- .widget-slot
+          //-   h2 Schedule a meeting with us below:
+          //-   .calendly-inline-widget(data-url="https://calendly.com/gocxm/demo?hide_gdpr_banner=1", style="min-width: 320px; height: 630px")
+          //-   script(type="text/javascript", src="https://assets.calendly.com/assets/external/widget.js", async)
 
-            
+          //- .divider
+
+          .information 
+            .logo
+              img(src="./assets/images/hero-logo.png", alt="")
+            .address 
+              p 116 Spadina Ave. 
+              p Unit 100
+              p Toronto ON
+              p M5V 2K6
+
+            .phone +1 (877) 490-0003
+
+          .form-container
+            form(action="#" method="post")
+              input(type="text", id="fFirstName", name="firstName", placeholder="First Name*", required)
+              input(type="email", id="fEmail", name="email", placeholder="Email*", required)
+              textarea(id="fMessage", name="message", placeholder="Message*", required)
+              button.cta-button(type="submit") CONTACT US
+
+
+              
 
 
 

@@ -1,0 +1,87 @@
+#contact-form {
+  padding: 8rem 0;
+  background-color: var(--dark-color);
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+
+    @include breakpoint($breakpoint-md) {
+      flex-direction: column;
+    }
+  }
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 340px;
+    padding-right: 2rem;
+
+    @include breakpoint($breakpoint-md) {
+      max-width: 100%;
+      margin-bottom: 4rem;
+    }
+
+    .logo {
+      width: 100%;
+      margin-bottom: 4.5rem;
+    }
+    .address {
+      width: 100%;
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+    .phone {
+      width: 100%;
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    @include breakpoint($breakpoint-xs) {
+      .address {
+        font-size: 1.6rem;
+      }
+      .phone {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .form-container {
+    width: 564px;
+
+    @include breakpoint($breakpoint-md) {
+      width: 100%;
+    }
+
+    textarea,
+    input {
+      display: block;
+      width: 100%;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      font-family: Jarkata;
+      border-radius: 8px;
+
+      &::placeholder {
+        color: #aaaddd;
+        font-weight: 300;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      height: 260px;
+      width: 100%;
+    }
+
+    .cta-button {
+      border: none;
+      font-size: 1.8rem;
+      margin-top: 2rem;
+      color: var(--white-color);
+    }
+  }
+}
