@@ -26,7 +26,7 @@
 
   .content,
   .leaders {
-    width: calc(50% - #{$gap / 2});
+    width: calc(50% - #{$gap} / 2);
   }
 
   .content {
@@ -46,7 +46,7 @@
     }
 
     @include breakpoint($breakpoint-lg) {
-      width: calc(60% - #{$gap / 2});
+      width: calc(60% - #{$gap} / 2);
     }
 
     @include breakpoint($breakpoint-md) {
@@ -81,7 +81,7 @@
     }
 
     @include breakpoint($breakpoint-lg) {
-      width: calc(40% - #{$gap / 2});
+      width: calc(40% - #{$gap} / 2);
     }
 
     @include breakpoint($breakpoint-md) {

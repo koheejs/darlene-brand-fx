@@ -172,15 +172,39 @@ header .header-nav li a {
 
 #hero-banner {
   background-image: url("../assets/images/landing-hero.png");
-  background-size: cover;
-  height: 80vh;
   max-height: 1000px;
-  position: relative;
 }
-#hero-banner .container {
+
+#platform-hero {
+  background-image: url("../assets/images/platform-hero.png");
+  background-position: top center;
+}
+
+#hero-banner,
+#platform-hero {
+  background-size: cover;
+  position: relative;
+  height: 90vh;
+}
+@media only screen and (max-width: 576px) {
+  #hero-banner,
+  #platform-hero {
+    height: 95vh;
+    max-height: 650px;
+  }
+}
+#hero-banner .container,
+#platform-hero .container {
   width: 100%;
 }
-#hero-banner .content {
+@media screen and (orientation: landscape) {
+  #hero-banner .container .container,
+  #platform-hero .container .container {
+    padding-top: 56.25%;
+  }
+}
+#hero-banner .content,
+#platform-hero .content {
   position: absolute;
   top: min(30vw, 30rem);
   left: 0;
@@ -188,41 +212,44 @@ header .header-nav li a {
   max-width: 1920px;
   padding: 0 8rem;
 }
-#hero-banner .logo {
+@media only screen and (max-width: 768px) {
+  #hero-banner .content,
+  #platform-hero .content {
+    padding: 0 3rem;
+  }
+}
+#hero-banner .logo,
+#platform-hero .logo {
   width: 510px;
 }
-#hero-banner .title {
+#hero-banner .title,
+#platform-hero .title {
   font-size: 5rem;
   margin-top: 3rem;
   font-weight: 700;
+  max-width: 100rem;
 }
-#hero-banner .description {
+#hero-banner .description,
+#platform-hero .description {
   font-size: 3rem;
   max-width: 890px;
   margin: 1rem 0 8rem;
 }
-
-@media screen and (orientation: landscape) {
-  #hero-banner .container {
-    padding-top: 56.25%;
-  }
-}
-@media only screen and (max-width: 1150px) {
-  #hero-banner .title {
+@media only screen and (max-width: 1200px) {
+  #hero-banner .title,
+  #platform-hero .title {
     font-size: 3.6rem;
   }
-  #hero-banner .description {
-    font-size: 2rem;
-  }
-  #hero-banner .logo {
+  #hero-banner .logo,
+  #platform-hero .logo {
     width: 40%;
   }
-}
-@media only screen and (max-width: 768px) {
-  #hero-banner .content {
-    padding: 0 3rem;
+  #hero-banner .description,
+  #platform-hero .description {
+    font-size: 2rem;
   }
 }
+
 #trusted-partners {
   background-color: var(--dark-color);
   padding: 6rem 0 6rem;
@@ -566,7 +593,7 @@ header .header-nav li a {
 }
 #good-service .content,
 #good-service .leaders {
-  width: calc(50% - 2rem);
+  width: calc(50% - 4rem / 2);
 }
 #good-service .content {
   max-width: 590px;
@@ -586,7 +613,7 @@ header .header-nav li a {
 }
 @media only screen and (max-width: 1200px) {
   #good-service .content {
-    width: calc(60% - 2rem);
+    width: calc(60% - 4rem / 2);
   }
 }
 @media only screen and (max-width: 992px) {
@@ -627,7 +654,7 @@ header .header-nav li a {
 }
 @media only screen and (max-width: 1200px) {
   #good-service .leaders {
-    width: calc(40% - 2rem);
+    width: calc(40% - 4rem / 2);
   }
 }
 @media only screen and (max-width: 992px) {
@@ -635,4 +662,79 @@ header .header-nav li a {
     width: 100%;
     max-width: none;
   }
+}
+
+.platform-introduction .container {
+  padding: 0;
+  max-width: none;
+  display: flex;
+}
+.platform-introduction:nth-child(2n+1) .container {
+  flex-direction: row-reverse;
+}
+.platform-introduction .column {
+  width: 50%;
+  padding-top: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+}
+@media only screen and (max-width: 768px) {
+  .platform-introduction .container {
+    display: block;
+  }
+  .platform-introduction .column {
+    width: 100%;
+    padding-top: 120%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .platform-introduction .column:first-child {
+    padding-top: 170%;
+  }
+}
+.platform-introduction .content,
+.platform-introduction .partnerships {
+  max-width: 560px;
+  padding: 2rem;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.platform-introduction .logo {
+  height: 7rem;
+  margin-bottom: 7rem;
+}
+.platform-introduction .logo img {
+  height: 100%;
+  width: auto;
+}
+@media only screen and (max-width: 992px) {
+  .platform-introduction .logo {
+    height: 5rem;
+    margin-bottom: 4rem;
+  }
+}
+.platform-introduction .description {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  margin-bottom: 6rem;
+}
+@media only screen and (max-width: 992px) {
+  .platform-introduction .description {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 4rem;
+  }
+}
+.platform-introduction .partnerships {
+  text-align: center;
+}
+.platform-introduction .partnerships h3 {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
 }

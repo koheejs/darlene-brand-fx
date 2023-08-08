@@ -1,9 +1,11 @@
 @import './_variables';
 @import './_global';
 
-@import './index/_hero-banner';
-@import './index/_partners';
-@import './index/_respark';
-@import './index/_business-expansion';
-@import './index/_catalyst-for-growth';
-@import './index/good-service';
+@import './sections/_hero-banner';
+@import './sections/_partners';
+@import './sections/_respark';
+@import './sections/_business-expansion';
+@import './sections/_catalyst-for-growth';
+@import './sections/good-service';
+
+@import './sections/platform';

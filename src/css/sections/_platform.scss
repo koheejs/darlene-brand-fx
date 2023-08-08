@@ -1,0 +1,83 @@
+.platform-introduction {
+  .container {
+    padding: 0;
+    max-width: none;
+    display: flex;
+  }
+
+  &:nth-child(2n + 1) {
+    .container {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .column {
+    width: 50%;
+    padding-top: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+  }
+
+  @include breakpoint($breakpoint-sm) {
+    .container {
+      display: block;
+    }
+
+    .column {
+      width: 100%;
+      padding-top: 120%;
+    }
+  }
+
+  @include breakpoint($breakpoint-xs) {
+    .column:first-child {
+      padding-top: 170%;
+    }
+  }
+
+  .content,
+  .partnerships {
+    max-width: 560px;
+    padding: 2rem;
+    position: absolute;
+    width: 100%;
+    @include flyCenter();
+  }
+
+  .logo {
+    height: 7rem;
+    margin-bottom: 7rem;
+    img {
+      height: 100%;
+      width: auto;
+    }
+
+    @include breakpoint($breakpoint-md) {
+      height: 5rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .description {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    margin-bottom: 6rem;
+
+    @include breakpoint($breakpoint-md) {
+      font-size: 2rem;
+      line-height: 3rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .partnerships {
+    text-align: center;
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
