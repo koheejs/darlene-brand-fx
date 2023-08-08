@@ -14,9 +14,24 @@
   position: relative;
   height: 90vh;
 
+  @media only screen and (max-width: #{$breakpoint-md}) and (orientation: portrait) {
+    height: 95vh;
+    max-height: 850px;
+  }
+
+  @include breakpoint($breakpoint-sm) {
+    display: flex;
+    align-items: center;
+  }
+
   @include breakpoint($breakpoint-xs) {
     height: 95vh;
     max-height: 650px;
+  }
+
+  @media screen and (max-height: 600px) {
+    height: auto;
+    max-height: none;
   }
 
   .container {
@@ -30,14 +45,48 @@
 
   .content {
     position: absolute;
-    top: min(30vw, 30rem);
+    bottom: min(30vw, 30rem);
     left: 0;
     width: 100%;
     max-width: 1920px;
     padding: 0 8rem;
 
-    @include breakpoint($breakpoint-sm) {
-      padding: 0 3rem;
+    @include breakpoint($breakpoint-md) {
+      bottom: min(30vw, 10rem);
+    }
+
+    @media only screen and (max-width: #{$breakpoint-lg}) and (orientation: landscape) {
+      bottom: min(30vw, 10rem);
+    }
+
+    @include breakpoint($breakpoint-xs) {
+      position: static;
+      padding: 0 0 4rem;
+      .title {
+        font-size: 2.6rem;
+      }
+      .description {
+        font-size: 1.6rem;
+        margin: 2rem 0 4rem;
+      }
+      .logo {
+        width: 200px;
+      }
+    }
+
+    @media screen and (max-height: 600px) {
+      position: static;
+      padding: 16rem 0 2rem;
+      .title {
+        font-size: 2.6rem;
+      }
+      .description {
+        font-size: 1.6rem;
+        margin: 2rem 0 4rem;
+      }
+      .logo {
+        width: 200px;
+      }
     }
   }
 

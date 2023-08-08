@@ -186,11 +186,32 @@ header .header-nav li a {
   position: relative;
   height: 90vh;
 }
+@media only screen and (max-width: 992px) and (orientation: portrait) {
+  #hero-banner,
+  #platform-hero {
+    height: 95vh;
+    max-height: 850px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #hero-banner,
+  #platform-hero {
+    display: flex;
+    align-items: center;
+  }
+}
 @media only screen and (max-width: 576px) {
   #hero-banner,
   #platform-hero {
     height: 95vh;
     max-height: 650px;
+  }
+}
+@media screen and (max-height: 600px) {
+  #hero-banner,
+  #platform-hero {
+    height: auto;
+    max-height: none;
   }
 }
 #hero-banner .container,
@@ -206,16 +227,62 @@ header .header-nav li a {
 #hero-banner .content,
 #platform-hero .content {
   position: absolute;
-  top: min(30vw, 30rem);
+  bottom: min(30vw, 30rem);
   left: 0;
   width: 100%;
   max-width: 1920px;
   padding: 0 8rem;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   #hero-banner .content,
   #platform-hero .content {
-    padding: 0 3rem;
+    bottom: min(30vw, 10rem);
+  }
+}
+@media only screen and (max-width: 1200px) and (orientation: landscape) {
+  #hero-banner .content,
+  #platform-hero .content {
+    bottom: min(30vw, 10rem);
+  }
+}
+@media only screen and (max-width: 576px) {
+  #hero-banner .content,
+  #platform-hero .content {
+    position: static;
+    padding: 0 0 4rem;
+  }
+  #hero-banner .content .title,
+  #platform-hero .content .title {
+    font-size: 2.6rem;
+  }
+  #hero-banner .content .description,
+  #platform-hero .content .description {
+    font-size: 1.6rem;
+    margin: 2rem 0 4rem;
+  }
+  #hero-banner .content .logo,
+  #platform-hero .content .logo {
+    width: 200px;
+  }
+}
+@media screen and (max-height: 600px) {
+  #hero-banner .content,
+  #platform-hero .content {
+    position: static;
+    padding: 16rem 0 2rem;
+  }
+  #hero-banner .content .title,
+  #platform-hero .content .title {
+    font-size: 2.6rem;
+  }
+  #hero-banner .content .description,
+  #platform-hero .content .description {
+    font-size: 1.6rem;
+    margin: 2rem 0 4rem;
+  }
+  #hero-banner .content .logo,
+  #platform-hero .content .logo {
+    width: 200px;
   }
 }
 #hero-banner .logo,
@@ -674,12 +741,14 @@ header .header-nav li a {
 }
 .platform-introduction .column {
   width: 50%;
-  padding-top: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   background-size: cover;
+}
+.platform-introduction .column:nth-child(2) {
+  padding-top: 70%;
 }
 @media only screen and (max-width: 768px) {
   .platform-introduction .container {
@@ -687,20 +756,24 @@ header .header-nav li a {
   }
   .platform-introduction .column {
     width: 100%;
-    padding-top: 120%;
   }
-}
-@media only screen and (max-width: 576px) {
-  .platform-introduction .column:first-child {
-    padding-top: 170%;
+  .platform-introduction .column:nth-child(2) {
+    padding-top: 120%;
   }
 }
 .platform-introduction .content,
 .platform-introduction .partnerships {
   max-width: 560px;
-  padding: 2rem;
-  position: absolute;
+  padding: 4rem 2rem;
   width: 100%;
+}
+@media only screen and (max-width: 576px) {
+  .platform-introduction .content {
+    padding: 10rem 2rem;
+  }
+}
+.platform-introduction .partnerships {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
