@@ -1,0 +1,180 @@
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --white-color: #{$white-color};
+  --black-color: #{$black-color};
+  --dark-color: #{$dark-color};
+}
+
+// Fonts
+@font-face {
+  font-family: 'Jarkata';
+  src: url(../assets/fonts/PlusJakartaSans-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jarkata';
+  src: url(../assets/fonts/PlusJakartaSans-SemiBold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jarkata';
+  src: url(../assets/fonts/PlusJakartaSans-Bold.ttf);
+  font-weight: 800;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Jarkata';
+  font-size: 1.8rem;
+  line-height: 1.3;
+  color: var(--white-color);
+  background-color: var(--black-color);
+  scroll-behavior: smooth;
+}
+
+body.freeze-body {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+li.active > a {
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  padding: 0 8rem;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  @include breakpoint($breakpoint-sm) {
+    padding: 0 3rem;
+  }
+}
+
+.section-title {
+  font-size: 4rem;
+  line-height: 1.2;
+
+  @include breakpoint($breakpoint-sm) {
+    font-size: 3rem;
+  }
+}
+
+.section-description {
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+.tag {
+  padding: 0.5rem 2rem;
+  background-color: var(--secondary-color);
+  display: inline-block;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  padding: 1rem 3rem;
+  border-radius: 10rem;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: var(--primary-color);
+  }
+}
+
+// Utilities
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-white {
+  color: var(--white-color);
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+// HEADER
+header {
+  padding: 2rem 0;
+  font-size: 2.4rem;
+  position: absolute;
+  top: 7vw;
+  left: 0;
+  right: 0;
+  z-index: 50;
+
+  .header-nav ul {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 800;
+    width: 100%;
+  }
+
+  &.active .header-nav {
+    transform: translateX(0%);
+  }
+
+  .header-nav li:hover a {
+    color: var(--primary-color);
+    transition: color 0.3s;
+  }
+
+  .header-nav li a {
+    display: block;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  @include breakpoint($breakpoint-sm) {
+    padding: 3rem 0;
+    font-size: 1.6rem;
+
+    .header-nav ul {
+      justify-content: center;
+    }
+  }
+}

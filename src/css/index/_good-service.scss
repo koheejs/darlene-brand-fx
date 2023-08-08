@@ -1,0 +1,92 @@
+#good-service {
+  $gap: 4rem;
+
+  padding: 8rem 0;
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: $gap;
+    @include breakpoint($breakpoint-md) {
+      flex-direction: column;
+    }
+  }
+
+  .section-title {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 8rem;
+
+    @include breakpoint($breakpoint-lg) {
+      font-size: 4rem;
+      margin-bottom: 5rem;
+    }
+  }
+
+  .content,
+  .leaders {
+    width: calc(50% - #{$gap / 2});
+  }
+
+  .content {
+    max-width: 590px;
+    p {
+      line-height: 1.6;
+      font-size: 2rem;
+      margin: 4rem 0;
+
+      &:last-child {
+        color: var(--primary-color);
+      }
+
+      @include breakpoint($breakpoint-sm) {
+        font-size: 1.8rem;
+      }
+    }
+
+    @include breakpoint($breakpoint-lg) {
+      width: calc(60% - #{$gap / 2});
+    }
+
+    @include breakpoint($breakpoint-md) {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  .leaders {
+    max-width: 490px;
+    .people {
+      margin-bottom: 6rem;
+    }
+    .avatar {
+      @include square(120px);
+      margin-bottom: 1rem;
+    }
+    .name {
+      font-size: 3rem;
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-bottom: 3rem;
+      @include breakpoint($breakpoint-sm) {
+        font-size: 2.4rem;
+      }
+    }
+    .intro {
+      font-size: 2rem;
+      @include breakpoint($breakpoint-sm) {
+        font-size: 1.8rem;
+      }
+    }
+
+    @include breakpoint($breakpoint-lg) {
+      width: calc(40% - #{$gap / 2});
+    }
+
+    @include breakpoint($breakpoint-md) {
+      width: 100%;
+      max-width: none;
+    }
+  }
+}

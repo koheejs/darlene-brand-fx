@@ -7,7 +7,7 @@ const browserSync = require('browser-sync').create();
 const paths = {
   assetsSrc: 'src/assets/**/*',
   jadeSrc: 'src/*.jade',
-  sassSrc: 'src/**/*.sass',
+  sassSrc: 'src/**/*.scss',
   outputDir: 'docs',
 };
 
