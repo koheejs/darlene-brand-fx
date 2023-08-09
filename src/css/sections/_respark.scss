@@ -38,15 +38,16 @@
 
     .goals {
       display: flex;
-      gap: 2rem;
       max-width: 1180px;
       margin: -10rem auto 0;
+      justify-content: space-between;
 
       li {
         background-color: var(--primary-color);
         border-radius: 8px;
         padding: 2rem;
-        flex: 1;
+        flex-shrink: 0;
+        width: calc(100% / 3 - 2rem);
 
         img {
           @include square(70px);
@@ -56,26 +57,27 @@
           font-weight: 800;
           font-size: 3rem;
         }
-      }
 
-      @include breakpoint($breakpoint-md) {
-        margin-top: -6rem;
+        @include breakpoint($breakpoint-md) {
+          img {
+            @include square(50px);
+          }
 
-        img {
-          @include square(50px);
-        }
-
-        p {
-          font-size: 2rem;
+          p {
+            font-size: 1.8rem;
+          }
         }
       }
 
       @include breakpoint($breakpoint-sm) {
         flex-direction: column;
+        gap: 2rem;
         align-items: center;
+        margin-top: -4rem;
 
         li {
           width: 300px;
+          max-width: 100%;
         }
       }
 
