@@ -46,11 +46,12 @@
 }
 
 #acceleration {
-  padding: 10rem 0;
+  padding: 10rem 0 11rem;
   background-color: var(--dark-color);
 
   .title {
     font-size: 9rem;
+    line-height: 1;
 
     strong {
       font-weight: 800;

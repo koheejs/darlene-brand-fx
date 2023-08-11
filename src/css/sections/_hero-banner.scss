@@ -44,19 +44,16 @@
 
   .content {
     position: absolute;
-    bottom: min(30vw, 30rem);
+    bottom: 0;
     left: 0;
     width: 100%;
     max-width: 1920px;
+    height: calc(100% - 7vw - 80px);
     padding: 0 8rem;
 
-    @include breakpoint($breakpoint-md) {
-      bottom: min(30vw, 10rem);
-    }
-
-    @media only screen and (max-width: #{$breakpoint-lg}) and (orientation: landscape) {
-      bottom: min(30vw, 10rem);
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     @include breakpoint($breakpoint-xs) {
       position: static;

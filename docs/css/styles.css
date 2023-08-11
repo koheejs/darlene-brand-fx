@@ -105,12 +105,15 @@ img {
 .cta-button {
   display: inline-block;
   background-color: var(--primary-color);
+  color: var(--white-color);
   padding: 1rem 3rem;
   border-radius: 10rem;
-  transition: background-color 0.3s;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 .cta-button:hover {
-  background-color: var(--primary-color);
+  background-color: var(--white-color);
+  color: var(--black-color);
 }
 
 .text-center {
@@ -226,23 +229,15 @@ header .header-nav li a {
 #hero-banner .content,
 #platform-hero .content {
   position: absolute;
-  bottom: min(30vw, 30rem);
+  bottom: 0;
   left: 0;
   width: 100%;
   max-width: 1920px;
+  height: calc(100% - 7vw - 80px);
   padding: 0 8rem;
-}
-@media only screen and (max-width: 992px) {
-  #hero-banner .content,
-  #platform-hero .content {
-    bottom: min(30vw, 10rem);
-  }
-}
-@media only screen and (max-width: 1200px) and (orientation: landscape) {
-  #hero-banner .content,
-  #platform-hero .content {
-    bottom: min(30vw, 10rem);
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 @media only screen and (max-width: 576px) {
   #hero-banner .content,
@@ -281,7 +276,7 @@ header .header-nav li a {
   }
   #hero-banner .content .logo,
   #platform-hero .content .logo {
-    width: 200px;
+    width: 20rem;
   }
 }
 #hero-banner .logo,
@@ -355,11 +350,12 @@ header .header-nav li a {
   }
 }
 #acceleration {
-  padding: 10rem 0;
+  padding: 10rem 0 11rem;
   background-color: var(--dark-color);
 }
 #acceleration .title {
   font-size: 9rem;
+  line-height: 1;
 }
 #acceleration .title strong {
   font-weight: 800;
@@ -463,6 +459,7 @@ header .header-nav li a {
 #business-expansion h2.title {
   text-align: center;
   font-size: 9rem;
+  line-height: 1;
   max-width: 1220px;
   margin: 0 auto 10rem;
 }
@@ -480,12 +477,14 @@ header .header-nav li a {
   margin-bottom: 12rem;
 }
 #business-expansion .components .item h3 {
+  text-align: center;
   font-size: 5rem;
   font-weight: 700;
 }
 #business-expansion .components .item .partners {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   margin: 4rem 0;
   min-height: 8rem;
@@ -495,13 +494,24 @@ header .header-nav li a {
 }
 #business-expansion .components .item .points {
   display: flex;
+  justify-content: center;
+  gap: 5rem;
   flex-wrap: wrap;
   font-size: 2.4rem;
 }
 #business-expansion .components .item .points li {
-  width: 50%;
   list-style: disc;
   list-style-position: inside;
+}
+@media only screen and (max-width: 576px) {
+  #business-expansion .components .item .points {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  #business-expansion .components .item .points li {
+    width: 250px;
+  }
 }
 
 @media only screen and (max-width: 1125px) {
@@ -534,23 +544,10 @@ header .header-nav li a {
   #business-expansion .components .item .partners {
     justify-content: center;
   }
-  #business-expansion .components .item .points {
-    max-width: 400px;
-    margin: 0 auto;
-  }
 }
 @media only screen and (max-width: 768px) {
-  #business-expansion .components .item .points li {
-    max-width: 230px;
-  }
   #business-expansion .components .item .partners {
     flex-direction: column;
-  }
-  #business-expansion .components .item .points {
-    justify-content: center;
-  }
-  #business-expansion .components .item .points li {
-    width: 100%;
   }
 }
 #catalyst-for-growth .growth-item {
@@ -576,6 +573,7 @@ header .header-nav li a {
 #catalyst-for-growth .growth-item .heading h3 {
   position: absolute;
   font-size: 8rem;
+  line-height: 1;
   font-weight: 700;
   top: 50%;
   left: 50%;
@@ -811,7 +809,6 @@ header .header-nav li a {
   border: none;
   font-size: 1.8rem;
   margin-top: 2rem;
-  color: var(--white-color);
 }
 
 .platform-introduction .container {
