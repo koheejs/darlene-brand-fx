@@ -11,7 +11,7 @@
 #platform-hero {
   background-size: cover;
   position: relative;
-  height: 90vh;
+  height: max(90vh, 500px);
 
   @media only screen and (max-width: #{$breakpoint-md}) and (orientation: portrait) {
     height: 95vh;
@@ -26,11 +26,6 @@
   @include breakpoint($breakpoint-xs) {
     height: 95vh;
     max-height: 650px;
-  }
-
-  @media screen and (max-height: 600px) {
-    height: auto;
-    max-height: none;
   }
 
   .container {
@@ -48,7 +43,7 @@
     left: 0;
     width: 100%;
     max-width: 1920px;
-    height: calc(100% - 7vw - 80px);
+    height: calc(100% - 2vw - 80px);
     padding: 0 8rem;
 
     display: flex;
