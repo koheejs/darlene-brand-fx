@@ -637,7 +637,7 @@ header .header-nav li a {
 }
 @media only screen and (max-width: 992px) {
   #good-service .container {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 #good-service .section-title {
