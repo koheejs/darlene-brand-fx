@@ -741,7 +741,7 @@ header .header-nav li a {
 #contact-form .information {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 340px;
   padding-right: 2rem;
