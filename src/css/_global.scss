@@ -33,8 +33,12 @@
 }
 
 html {
-  font-size: 10px;
+  // font-size: 10px;
+  font-size: 9.5px;
   scroll-behavior: smooth;
+  @include breakpoint($breakpoint-sm) {
+    font-size: 10px;
+  }
 }
 
 body {
