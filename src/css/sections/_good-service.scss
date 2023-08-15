@@ -17,6 +17,7 @@
     font-size: 5rem;
     font-weight: 700;
     margin-bottom: 8rem;
+    color: var(--primary-color);
 
     @include breakpoint($breakpoint-lg) {
       font-size: 4rem;
