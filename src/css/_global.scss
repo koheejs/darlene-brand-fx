@@ -188,7 +188,7 @@ header {
   }
 
   .header-nav li:hover a {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     transition: color 0.3s;
   }
 
@@ -201,6 +201,10 @@ header {
   @include breakpoint($breakpoint-md) {
     font-size: 2rem;
     height: 80px;
+
+    .header-nav ul {
+      gap: 20px;
+    }
   }
 
   @include breakpoint($breakpoint-sm) {

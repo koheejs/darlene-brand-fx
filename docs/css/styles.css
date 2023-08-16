@@ -179,7 +179,7 @@ header.active .header-nav {
   transform: translateX(0%);
 }
 header .header-nav li:hover a {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   transition: color 0.3s;
 }
 header .header-nav li a {
@@ -191,6 +191,9 @@ header .header-nav li a {
   header {
     font-size: 2rem;
     height: 80px;
+  }
+  header .header-nav ul {
+    gap: 20px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -905,9 +908,23 @@ header .header-nav li a {
 }
 .platform-introduction .content,
 .platform-introduction .partnerships {
+  position: relative;
   max-width: 560px;
   padding: 4rem 2rem;
   width: 100%;
+}
+.platform-introduction .scroll-anchor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  left: 0;
+  top: -100px;
+}
+@media only screen and (max-width: 992px) {
+  .platform-introduction .scroll-anchor {
+    top: -80px;
+  }
 }
 @media only screen and (max-width: 576px) {
   .platform-introduction .content {

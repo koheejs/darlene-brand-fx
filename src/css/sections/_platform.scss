@@ -47,9 +47,22 @@
 
   .content,
   .partnerships {
+    position: relative;
     max-width: 560px;
     padding: 4rem 2rem;
     width: 100%;
+  }
+
+  .scroll-anchor {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    left: 0;
+    top: -100px;
+    @include breakpoint($breakpoint-md) {
+      top: -80px;
+    }
   }
 
   @include breakpoint($breakpoint-xs) {
