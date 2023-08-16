@@ -11,8 +11,16 @@ html(lang="en")
   body
     header
       .container
+        a.logo(href="./")
+          img(src="./assets/images/hero-logo.png", alt="") 
+        
+        .menu-burger
+          img(src="./assets/images/icon-burgermenu.png", alt="")
+
         nav.header-nav
           ul
+            li
+              a(href="./") Home
             li
               a(href="platform.html#product") Product
             li
@@ -208,7 +216,7 @@ html(lang="en")
               textarea(id="fMessage", name="message", placeholder="Message*", required)
               button.cta-button(type="submit") CONTACT US
 
-
+    script(src="./js/app.js") 
               
 
 

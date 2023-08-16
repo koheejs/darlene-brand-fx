@@ -11,8 +11,16 @@ html(lang="en")
   body
     header
       .container
+        a.logo(href="./")
+          img(src="./assets/images/hero-logo.png", alt="") 
+        
+        .menu-burger
+          img(src="./assets/images/icon-burgermenu.png", alt="")
+
         nav.header-nav
           ul
+            li
+              a(href="./") Home
             li
               a(href="platform.html#product") Product
             li
@@ -93,19 +101,4 @@ html(lang="en")
               .logos 
                 img(src="./assets/images/partnerships-4.png", alt="")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    script(src="./js/app.js") 

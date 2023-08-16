@@ -11,6 +11,7 @@
 #platform-hero {
   background-size: cover;
   position: relative;
+  margin-top: 100px;
   height: max(90vh, 500px);
 
   @media only screen and (max-width: #{$breakpoint-md}) and (orientation: portrait) {
@@ -18,8 +19,13 @@
     max-height: 850px;
   }
 
+  @include breakpoint($breakpoint-md) {
+    margin-top: 80px;
+  }
+
   @include breakpoint($breakpoint-sm) {
     display: flex;
+    margin-top: 60px;
     align-items: center;
   }
 
