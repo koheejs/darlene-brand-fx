@@ -13,4 +13,11 @@
   menuButton.addEventListener('click', function () {
     navigation.classList.toggle(classActive);
   });
+
+  const navigationItems = navigation.querySelectorAll('a');
+  navigationItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+      navigation.classList.toggle(classActive);
+    });
+  });
 })();

@@ -1,10 +1,18 @@
 #hero-banner {
   background-image: url('../assets/images/landing-hero.png');
+
+  .description {
+    margin: 1rem 0 8rem;
+  }
 }
 
 #platform-hero {
   background-image: url('../assets/images/platform-hero.png');
   background-position: top center;
+
+  .description {
+    margin: 4rem 0 8rem;
+  }
 }
 
 #hero-banner,
@@ -101,7 +109,6 @@
   .description {
     font-size: 3rem;
     max-width: 890px;
-    margin: 1rem 0 8rem;
   }
 
   @include breakpoint($breakpoint-lg) {

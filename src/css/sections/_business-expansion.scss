@@ -42,7 +42,11 @@
         min-height: 8rem;
 
         img {
-          max-height: 100%;
+          height: 40px;
+
+          &.short-logo {
+            height: 60px;
+          }
         }
       }
 
@@ -71,13 +75,17 @@
   }
 }
 
-@media only screen and (max-width: 1125px) {
+@media only screen and (max-width: 1180px) {
   #business-expansion {
     h2.title {
       font-size: max(6vw, 4rem);
       margin-bottom: 10rem;
     }
+  }
+}
 
+@media only screen and (max-width: 1125px) {
+  #business-expansion {
     .components {
       .item {
         h3 {
