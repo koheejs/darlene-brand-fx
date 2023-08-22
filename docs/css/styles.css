@@ -450,6 +450,9 @@ header .header-nav li a {
 #respark-your-brand .content .title:first-child {
   font-weight: 800;
 }
+#respark-your-brand .content .title span {
+  display: block;
+}
 #respark-your-brand .content .description {
   max-width: 780px;
   font-size: max(2rem, min(3rem, 2vw));
