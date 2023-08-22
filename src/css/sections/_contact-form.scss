@@ -32,15 +32,27 @@
       max-width: 100%;
       margin-bottom: 4rem;
     }
+
     .address {
       width: 100%;
       font-size: 2rem;
       margin-bottom: 3rem;
+
+      .email {
+        font-weight: bold;
+      }
     }
+
     .phone {
       width: 100%;
       font-size: 3rem;
       font-weight: 700;
+    }
+
+    .email {
+      font-weight: 700;
+      font-size: 2rem;
+      width: 100%;
     }
 
     @include breakpoint($breakpoint-xs) {
