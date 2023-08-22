@@ -4,11 +4,16 @@
 
   .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
-    @include breakpoint($breakpoint-md) {
+    @include breakpoint($breakpoint-xs) {
       flex-direction: column;
     }
+  }
+
+  .logo {
+    width: 340px;
+    margin-bottom: 4.5rem;
   }
 
   .information {
@@ -16,17 +21,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 340px;
-    padding-right: 2rem;
+    text-align: right;
+    flex-shrink: 0;
 
     @include breakpoint($breakpoint-md) {
       max-width: 100%;
       margin-bottom: 4rem;
-    }
-
-    .logo {
-      width: 100%;
-      margin-bottom: 4.5rem;
     }
     .address {
       width: 100%;
@@ -40,6 +40,7 @@
     }
 
     @include breakpoint($breakpoint-xs) {
+      text-align: left;
       .address {
         font-size: 1.6rem;
       }

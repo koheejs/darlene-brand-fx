@@ -805,30 +805,30 @@ header .header-nav li a {
 }
 #contact-form .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 576px) {
   #contact-form .container {
     flex-direction: column;
   }
+}
+#contact-form .logo {
+  width: 340px;
+  margin-bottom: 4.5rem;
 }
 #contact-form .information {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 340px;
-  padding-right: 2rem;
+  text-align: right;
+  flex-shrink: 0;
 }
 @media only screen and (max-width: 992px) {
   #contact-form .information {
     max-width: 100%;
     margin-bottom: 4rem;
   }
-}
-#contact-form .information .logo {
-  width: 100%;
-  margin-bottom: 4.5rem;
 }
 #contact-form .information .address {
   width: 100%;
@@ -841,6 +841,9 @@ header .header-nav li a {
   font-weight: 700;
 }
 @media only screen and (max-width: 576px) {
+  #contact-form .information {
+    text-align: left;
+  }
   #contact-form .information .address {
     font-size: 1.6rem;
   }
