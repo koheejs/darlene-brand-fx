@@ -800,8 +800,13 @@ header .header-nav li a {
 }
 
 #contact-form {
-  padding: 8rem 0;
-  background-color: var(--dark-color);
+  padding: 16rem 0;
+  background-color: #0e2637;
+}
+@media only screen and (max-width: 576px) {
+  #contact-form {
+    padding: 10rem 0;
+  }
 }
 #contact-form .container {
   display: flex;
