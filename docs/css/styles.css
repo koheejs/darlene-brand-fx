@@ -179,11 +179,12 @@ header.active .header-nav {
   transform: translateX(0%);
 }
 header .header-nav li:hover a {
-  color: var(--primary-color);
+  color: var(--white-color);
   transition: color 0.3s;
 }
 header .header-nav li a {
   display: block;
+  color: var(--primary-color);
   padding: 5px 10px;
   cursor: pointer;
 }
